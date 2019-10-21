@@ -6,6 +6,9 @@ function validate(path) {
 	return function (schema) {
 		if (schema == null)
 			throw "Schema should not be empty";
+		// if ( schema instanceof Joi.object )
+
+		
 		return function (req, res, next) {
 			const body = req[path];
 			const response = Joi.validate(body, schema, { abortEarly: false });
