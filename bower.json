@@ -1,0 +1,14 @@
+{
+	"name": "lihkg",
+	"description": "A Wrapper for lihkg API Endpoint",
+	"main": "index.js",
+	"authors": [
+		"ken.yip"
+	],
+	"license": "MIT",
+	"keywords": [
+		"lihkg",
+		"rest-api"
+	],
+	"homepage": "https://github.com/ken20206/lihkg"
+}

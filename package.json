@@ -1,0 +1,22 @@
+{
+	"name": "express-joi-verifier",
+	"version": "1.0.0",
+	"description": "An express middleware for validate query, body and params using Joi Schema",
+	"main": "index.js",
+	"scripts": {
+		"test": "npm run test"
+	},
+	"keywords": [
+		"joi",
+		"express",
+		"validator"
+	],
+	"author": "ken.yip",
+	"license": "ISC",
+	"dependencies": {
+		"joi": "^14.3.1"
+	},
+	"devDependencies": {
+		"express": "^4.17.1"
+	}
+}
