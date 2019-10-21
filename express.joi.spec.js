@@ -42,6 +42,9 @@ describe('Validate Schema', () => {
 	it('expect to throw error if schema is not supply', function () {
 		expect(() => { validate.body() }).toThrow();
 	});
+	it('expect to throw error if non joi object is given as schema', function () {
+		expect(() => { validate.body({ hello: 'world' }) }).toThrow();
+	});
 });
 
 describe('Validate query', () => {
@@ -72,7 +75,6 @@ describe('Validate query', () => {
 		expect(typeof response.body.foo).toBe('string');
 		expect(typeof response.body.bar).toBe('number');
 	});
-
 });
 
 describe('Validate body', () => {
@@ -103,7 +105,6 @@ describe('Validate body', () => {
 		expect(typeof response.body.foo).toBe('string');
 		expect(typeof response.body.bar).toBe('number');
 	});
-
 });
 
 
@@ -116,5 +117,4 @@ describe('Validate params', () => {
 	it('expect to pass if correct params has given', async () => {
 		await request(app).get('/params/123').expect(200);
 	});
-
 });
